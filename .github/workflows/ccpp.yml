@@ -10,6 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: compile
-      run: g++ -std=c++17 test.cpp -o test
+      run: g++ -Wall -std=c++17 test.cpp -o test
     - name: check
       run: ./test -s
