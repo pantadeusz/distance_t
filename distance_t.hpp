@@ -488,7 +488,7 @@ inline void beizer_spline(const std::vector<generic_position_t<double, N>>& path
                 if (velocity_included) {
                   a.back() = b.back() = c.back() = 0.0;
                 }
-                auto [d, e] = additional_p(a, b, c);
+                [[maybe_unused]]  auto [d, e] = additional_p(a, b, c);
                 e.back() = path[i].back();
                 t.push_back(path[i]);
                 t.push_back(e);
@@ -502,7 +502,7 @@ inline void beizer_spline(const std::vector<generic_position_t<double, N>>& path
                 if (velocity_included) {
                   a.back() = b.back() = c.back() = 0.0;
                 }
-                auto [d, e] = additional_p(a, b, c);
+                [[maybe_unused]] auto [d, e] = additional_p(a, b, c);
                 d.back() = path[i].back();
                 t.push_back(d);
                 t.push_back(path[i]);
