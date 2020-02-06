@@ -284,7 +284,13 @@ inline distance_with_velocity_t to_distance_with_v_t (const distance_t &v) {
 };
 
 
-
+/**
+ * Function calculates distance from the point A to the segment that starts in B and ends int C. If the B-C distance is 0, then it returns the distance from A to B.
+ * @arg A point to check against
+ * @arg B first point of a segment
+ * @arg C second point of a segment
+ * @return distance from A to the closest point on the line segment B-C
+ */
 template<class T,std::size_t N>
 inline double point_segment_distance_3d(const generic_position_t<T,N>& A, const generic_position_t<T,N>& B, const generic_position_t<T,N>& C)
 {
