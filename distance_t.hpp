@@ -1,6 +1,6 @@
 /*
 
-   Copyright 2019 Tadeusz Puzniakowski
+   Copyright 2019,2020,2021 Tadeusz Puzniakowski
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -229,7 +229,8 @@ inline std::ostream& operator<<(std::ostream& os, generic_position_t<T,N> const&
 
 //double calculate_linear_coefficient_from_limits(const std::vector<double>& limits_for_axes, const generic_position_t& norm_vect)
 //std::vector<double>
-auto calculate_linear_coefficient_from_limits = [](const auto& limits_for_axes, const auto& norm_vect) -> double
+template<class T>
+double calculate_linear_coefficient_from_limits(const T& limits_for_axes, const T& norm_vect)
 {
     double average_max_accel = 0;
     double average_max_accel_sum = 0;
